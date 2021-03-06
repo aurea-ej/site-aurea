@@ -92,8 +92,53 @@ export default function InfoCourses(props) {
 
             src: 'https://i.ibb.co/j8x9vvw/Co-pia-de-4-RENDER-FINAL.png',
             title: 'Aurea',
-            txt: 'O âmbito conceitual do projeto foi pautado na própria cultura organizacional da Aurea, algo feito propositalmente em prol de atingir um nível satisfatório de pertencimento, algo que além de criar um ambiente que condiz com os princípios da empresa, a fortalece.    A fim de viabilizar os conceitos propostos, as soluções práticas basearam-se em construir um layout móvel e híbrido a fim de criar infinitas possibilidades que serão descobertas de acordo com as demandas. Além de expor a história da empresa nas paredes, tal como criar espaço para os prêmios. Tudo isso com o objetivo de criar um ambiente despojado e acolhedor ao proporcionar a infraestrutura necessária para o bem estar do membro',
+            txt: 'O âmbito conceitual do projeto foi pautado na própria cultura organizacional da Aurea, algo feito propositalmente em prol de atingir um nível satisfatório de pertencimento, algo que além de criar um ambiente que condiz com os princípios da empresa, a fortalece.    A fim de viabilizar os conceitos propostos, as soluções práticas basearam-se em construir um layout móvel e híbrido a fim de criar infinitas possibilidades que serão descobertas de acordo com as demandas. Além de expor a história da empresa nas paredes, tal como criar espaço para os prêmios. Tudo isso com o objetivo de criar um ambiente despojado e acolhedor ao proporcionar a infraestrutura necessária para o bem estar do membro.',
             serviceType: 'projeto de interiores comercial'
+
+        },
+        {
+
+            src: 'https://i.ibb.co/419T57R/6-effects-Result.png',
+            title: 'Juliana e José',
+            txt: 'Localizada em Campos dos Goytacazes, a Casa J constitui um projeto com área equivalente a 286,79 m². A residência foi projetada com base nos conceitos de funcionalidade e modernidade para atender aos desejos da família composta por quatro membros. O grande desafio foi adaptar o programa de necessidades à estrutura existente.    Na fachada principal, foram usados tons neutros, como o cinza e o branco, trazendo um ar de contemporaneidade e sofisticação, e o revestimento amadeirado, garantindo elegância na medida certa. A jardineira na varanda trouxe um charme a mais na composição!    O projeto de Arquitetura também contempla a reforma da área de lazer da residência. Trabalhando o conceito de integração, é possível notar que o espaço foi projetado para atender as necessidades da família por um ambiente aconchegante e amplo de socialização. O objetivo foi criar uma atmosfera atraente e relaxante para descanso e também para festas e encontros.    Foi projetada uma varanda Gourmet com uma área para churrasqueira, que recebe o apoio de uma cozinha instalada ao lado de fora da casa, ela pode servir como auxílio para a cozinha interna e também cria uma versatilidade de usos.Para compor o ambiente e torná-lo cada vez mais agradável, foi instalado um pergolado com trepadeiras. Ele funciona como um quebra sol, a combinação dos elementos ajuda a reduzir a temperatura do interior do ambiente, deixando o clima mais aconchegante.',
+            duration: '03/07/2020 - 25/09/2020',
+            serviceType: 'projeto de Reforma Residencial'
+
+        },
+        {
+
+            src: 'https://i.ibb.co/rGPN6qY/2-effects-Result.png',
+            title: 'Juliana e José',
+            txt: 'Localizada em Campos dos Goytacazes, a Casa J constitui um projeto com área equivalente a 286,79 m². A residência foi projetada com base nos conceitos de funcionalidade e modernidade para atender aos desejos da família composta por quatro membros. O grande desafio foi adaptar o programa de necessidades à estrutura existente.    Na fachada principal, foram usados tons neutros, como o cinza e o branco, trazendo um ar de contemporaneidade e sofisticação, e o revestimento amadeirado, garantindo elegância na medida certa. A jardineira na varanda trouxe um charme a mais na composição!    O projeto de Arquitetura também contempla a reforma da área de lazer da residência. Trabalhando o conceito de integração, é possível notar que o espaço foi projetado para atender as necessidades da família por um ambiente aconchegante e amplo de socialização. O objetivo foi criar uma atmosfera atraente e relaxante para descanso e também para festas e encontros.    Foi projetada uma varanda Gourmet com uma área para churrasqueira, que recebe o apoio de uma cozinha instalada ao lado de fora da casa, ela pode servir como auxílio para a cozinha interna e também cria uma versatilidade de usos.Para compor o ambiente e torná-lo cada vez mais agradável, foi instalado um pergolado com trepadeiras. Ele funciona como um quebra sol, a combinação dos elementos ajuda a reduzir a temperatura do interior do ambiente, deixando o clima mais aconchegante.',
+            duration: '03/07/2020 - 25/09/2020',
+            serviceType: 'projeto de Reforma Residencial'
+
+        },
+        {
+
+            src: 'https://i.ibb.co/k2Vc3sv/1-effects-Result.png',
+            title: 'Juliana e José',
+            txt: 'Localizada em Campos dos Goytacazes, a Casa J constitui um projeto com área equivalente a 286,79 m². A residência foi projetada com base nos conceitos de funcionalidade e modernidade para atender aos desejos da família composta por quatro membros. O grande desafio foi adaptar o programa de necessidades à estrutura existente.    Na fachada principal, foram usados tons neutros, como o cinza e o branco, trazendo um ar de contemporaneidade e sofisticação, e o revestimento amadeirado, garantindo elegância na medida certa. A jardineira na varanda trouxe um charme a mais na composição!    O projeto de Arquitetura também contempla a reforma da área de lazer da residência. Trabalhando o conceito de integração, é possível notar que o espaço foi projetado para atender as necessidades da família por um ambiente aconchegante e amplo de socialização. O objetivo foi criar uma atmosfera atraente e relaxante para descanso e também para festas e encontros.    Foi projetada uma varanda Gourmet com uma área para churrasqueira, que recebe o apoio de uma cozinha instalada ao lado de fora da casa, ela pode servir como auxílio para a cozinha interna e também cria uma versatilidade de usos.Para compor o ambiente e torná-lo cada vez mais agradável, foi instalado um pergolado com trepadeiras. Ele funciona como um quebra sol, a combinação dos elementos ajuda a reduzir a temperatura do interior do ambiente, deixando o clima mais aconchegante.',
+            duration: '03/07/2020 - 25/09/2020',
+            serviceType: 'projeto de Reforma Residencial'
+
+        },
+        {
+
+            src: 'https://i.ibb.co/PrYp3Ty/imagem-renderizada-1.png',
+            title: 'Joaquim',
+            txt: 'O projeto de interiores em questão foi realizado para uma cozinha. Esse ambiente não apresentava uma funcionalidade adequada e um modelo precário, no qual o cliente não se identificava no espaço,  além do layout ser pequeno. Para solucionar tal inadequação, foi pensado um mobiliário planejado, com armários suspensos e abaixo das bancadas, a substituição de alguns eletrodomésticos, como a mudança de um fogão por um cooktop - forma essa encontrada para desocupar o espaço inferior, que seria utilizado para os armários - e também houve a implementação de uma coifa na cozinha, com o intuito de minimizar os resíduos durante o preparo de alimentos, tais como fumaça e gordura, assim, oferecendo um conforto maior nesse ambiente.',
+            duration: '22/06/2020 - 17/07/2020',
+            serviceType: 'projeto de Reforma residencial - cozinha'
+
+        },
+        {
+
+            src: 'https://i.ibb.co/FmHWR35/vista-02.jpg',
+            title: 'Joaquim',
+            txt: 'O projeto de interiores em questão foi realizado para uma cozinha. Esse ambiente não apresentava uma funcionalidade adequada e um modelo precário, no qual o cliente não se identificava no espaço,  além do layout ser pequeno. Para solucionar tal inadequação, foi pensado um mobiliário planejado, com armários suspensos e abaixo das bancadas, a substituição de alguns eletrodomésticos, como a mudança de um fogão por um cooktop - forma essa encontrada para desocupar o espaço inferior, que seria utilizado para os armários - e também houve a implementação de uma coifa na cozinha, com o intuito de minimizar os resíduos durante o preparo de alimentos, tais como fumaça e gordura, assim, oferecendo um conforto maior nesse ambiente.',
+            duration: '22/06/2020 - 17/07/2020',
+            serviceType: 'projeto de Reforma residencial - cozinha'
 
         }
     ]
