@@ -301,7 +301,7 @@ function Home() {
 
                     <h3>Por que escolher a Aurea?</h3>
 
-                    <p>A Aurea é uma empresa <strong>sem fins lucrativos</strong>, composta 100% por estudantes graduandos do IFF Centro. Toda renda é reinvestida em conhecimento para nossos membros, através de cursos, equipamentos, infraestrutura e etc. Todos são voluntários e estão aqui para se desenvolver profissionalmente e realizar sonhos. <strong>Temos preços abaixos do mercado</strong>, pois como dizemos, nosso foco é o desenvolvimento. Todos os nossos projetos são supervisionados por professores orientadores, que garantem a qualidade do mesmo! são 5 anos de existência <strong>realizando sonhos</strong>. E aí, o que podemos alcançar juntos?.</p>
+                    <p>A Aurea é uma empresa <strong>sem fins lucrativos</strong>, composta 100% por estudantes graduandos do IFF Centro. Toda renda é reinvestida em conhecimento para nossos membros, através de cursos, equipamentos, infraestrutura e etc. Todos são voluntários e estão aqui para se desenvolver profissionalmente e realizar sonhos. Todos os nossos projetos são supervisionados por professores orientadores, que garantem a qualidade do mesmo! são 5 anos de existência <strong>realizando sonhos</strong>. E aí, o que podemos alcançar juntos?.</p>
                     
 
                 </div>

@@ -19,23 +19,23 @@ export default function InfoCourses(props) {
 
         {
 
-            src: 'https://i.ibb.co/2q5kBC3/JMV-GLOBAL-SITE.png',
-            title: 'JMV GLOBAL - Site institucional',
-            txt: 'Site institucional da JMV GLOBAL, feito por meio da plataforma wordpress, foi uma reconstrução do site já existente, mudando o visual e as funcionalidades.'
+            src: 'https://i.ibb.co/WPMcS6V/JK-MODAS-SITE.png',
+            title: 'JK MODAS - Site de vendas',
+            txt: 'Tendo em vista a necessidade de aumentar sua visibilidade online, a JK Modas desejava fazer um site para venda online de roupas e acessórios. O cliente entra na plataforma, solicita o produto pelo site e realiza o pagamento no ato da entrega. O modelo de negócios funcionou muito bem e após a entrega do projeto, o investimento foi recuperado em uma semana.'
 
         },
         {
 
-            src: 'https://i.ibb.co/WPMcS6V/JK-MODAS-SITE.png',
-            title: 'JK MODAS - Site de vendas',
-            txt: 'Site para venda de produtos online, com a solicitação de compras pelo site e pagamento na entrega, com a entrega do projeto, o cliente recuperou o investimento em uma semana.'
+            src: 'https://i.ibb.co/2q5kBC3/JMV-GLOBAL-SITE.png',
+            title: 'JMV GLOBAL - Site institucional',
+            txt: 'Reconstrução do site da JMV Global. Foi um projeto onde refizemos todo o site da empresa, acrescentando uma área para comercialização de cursos online, que foi solicitado devido a pandemia.'
 
         },
         {
 
             src: 'https://i.ibb.co/VmbWHjf/JMV-GLOBAL-SISTEMA-WEB.jpg',
             title: 'JMV GLOBAL - Sistema Web',
-            txt: 'Sistema web para geração de documentos em PDF, este sistema permite que uma pessoa cadastre sua empresa e setores e gere um documento sobre riscos no local de trabalho.'
+            txt: 'Sistema Web para geração de relatórios de segurança. Nesse projeto, elaboramos um sistema onde o usuário faz o cadastro de sua empresa e seus setores. O sistema retorna um relatório com informações sobre riscos no local de trabalho.'
 
         }
     ]
@@ -140,7 +140,7 @@ export default function InfoCourses(props) {
 
                         <h3>Consultoria / Outros Serviços:</h3>
 
-                        <p>Além dos serviços listados a cima, também oferecemos consultoria e outros projetos e soluções na área de Engenharia de Computação.Para maiores informações, entre em < Link to = '/Contato' > contato </Link> conosco.</p>
+                        <p>Além dos serviços listados acima, também oferecemos consultoria e outros projetos e soluções na área de Engenharia de Computação.Para maiores informações, entre em < Link to = '/Contato' > contato </Link> conosco.</p>
 
                     </div>
 
@@ -154,8 +154,6 @@ export default function InfoCourses(props) {
 
                     <h2>Nossos projetos de Computação</h2>
 
-                    <img src={leftArrow} className='arrow-left' onClick={prevImage} />
-
                     {
                         dataSlide.map((item, index) => {
 
@@ -168,10 +166,18 @@ export default function InfoCourses(props) {
                                         <div className='projectsCoursesDiv' >
 
                                             <img src={item.src} className='imgProjects' />
+
+                                            <div className='arrows' >
+
+                                                <img src={leftArrow} className='arrow-left' onClick={prevImage} />
+
+                                                <img src={rightArrow} className='arrow-right' onClick={nextImage} />
+
+                                            </div>
                                             
-                                            <h1>{item.title}</h1>
+                                            <h3>{item.title}</h3>
                                             <p>{item.txt}</p>
-                                            <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p>
+                                            {/* <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p> */}
                                         
                                         </div>
 
@@ -184,8 +190,6 @@ export default function InfoCourses(props) {
                         })
 
                     }
-
-                    <img src={rightArrow} className='arrow-right' onClick={nextImage} />
 
                 </div>
 

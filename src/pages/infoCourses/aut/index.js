@@ -20,14 +20,14 @@ export default function InfoCourses(props) {
 
             src: 'https://i.ibb.co/WcTG0sc/barril-cheio2.jpg',
             title: 'Barril Cheio',
-            txt: 'Texto qualquer bla bla bla mt loouco em'
+            txt: 'O cliente queria modernizar seu negócio com uma chopeira automatizada. Para isso a Aurea trabalhou numa consultoria, fazendo uma pesquisa de mercado, listagem de equipamentos necessários, a diagramação do sistema, layout 3D e uma estimativa de preço da chopeira.'
 
         },
         {
 
             src: 'https://i.ibb.co/vsSTxGq/tr-pica2.jpg',
             title: 'Trópica',
-            txt: 'Texto qualquer bla bla bla mt loouco em'
+            txt: 'O cliente queria revitalizar seu sistema de lavagem automática de barris. Para isso a Aurea reformulou o sistema de CLP que o cliente usava, de modo que a lavagem fosse completa e sem danificar a estrutura e alterar as propriedades da bebida.'
 
         }
     ]
@@ -146,8 +146,6 @@ export default function InfoCourses(props) {
 
                     <h2>Nossos projetos de Automação</h2>
 
-                    <img src={leftArrow} className='arrow-left' onClick={prevImage} />
-
                     {
                         dataSlide.map((item, index) => {
 
@@ -160,8 +158,16 @@ export default function InfoCourses(props) {
                                         <div className='projectsCoursesDiv' >
 
                                             <img src={item.src} className='imgProjects' />
+
+                                            <div className='arrows' >
+
+                                                <img src={leftArrow} className='arrow-left' onClick={prevImage} />
+
+                                                <img src={rightArrow} className='arrow-right' onClick={nextImage} />
+
+                                            </div>
                                             
-                                            <h1>{item.title}</h1>
+                                            <h3>{item.title}</h3>
                                             <p>{item.txt}</p>
                                             <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p>
                                         
@@ -176,8 +182,6 @@ export default function InfoCourses(props) {
                         })
 
                     }
-
-                    <img src={rightArrow} className='arrow-right' onClick={nextImage} />
 
                 </div>
 

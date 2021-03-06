@@ -298,32 +298,6 @@ html {
 
 }
 
-.arrow-right {
-
-    position: absolute;
-    right: 32px;
-    top: 50%;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-    height: 55px;
-    width: 55px;
-
-}
-
-.arrow-left {
-
-    position: absolute;
-    left: 32px;
-    top: 50%;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-    height: 55px;
-    width: 55px;
-
-}
-
 .slide {
 
     opacity: 0;
@@ -470,28 +444,6 @@ html {
 
         height: 70vh;
         margin-top: 100px;
-
-    }
-
-    .arrow-right{
-
-        right: 0px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #DBB826;
-        opacity: .65;
-
-    }
-
-    .arrow-left{
-
-        left: 0px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #DBB826;
-        opacity: .65;
 
     }
 

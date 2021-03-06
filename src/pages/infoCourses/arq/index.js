@@ -220,7 +220,7 @@ export default function InfoCourses(props) {
 
                         <h3>Consultoria/Outros Serviços:</h3>
 
-                        <p>Além dos serviços listados a cima, também oferecemos consultoria e outros projetos e soluções na área de Arquitetura e Urbanismo.
+                        <p>Além dos serviços listados acima, também oferecemos consultoria e outros projetos e soluções na área de Arquitetura e Urbanismo.
                         Para maiores informações, entre em  <Link to='/Contato' >contato</Link> conosco.</p>
                     </div>
 
@@ -235,8 +235,6 @@ export default function InfoCourses(props) {
 
                     <h2>Nossos projetos de Arquitetura</h2>
 
-                    <img src={leftArrow} className='arrow-left' onClick={prevImage} />
-
                     {
                         dataSlide.map((item, index) => {
 
@@ -249,8 +247,16 @@ export default function InfoCourses(props) {
                                         <div className='projectsCoursesDiv' >
 
                                             <img src={item.src} className='imgProjects' />
+
+                                            <div className='arrows' >
+
+                                                <img src={leftArrow} className='arrow-left' onClick={prevImage} />
+
+                                                <img src={rightArrow} className='arrow-right' onClick={nextImage} />
+
+                                            </div>
                                             
-                                            <h1>{item.title}</h1>
+                                            <h3>{item.title}</h3>
                                             <p>{item.txt}</p>
                                             <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p>
                                         
@@ -265,8 +271,6 @@ export default function InfoCourses(props) {
                         })
 
                     }
-
-                    <img src={rightArrow} className='arrow-right' onClick={nextImage} />
 
                 </div>
 

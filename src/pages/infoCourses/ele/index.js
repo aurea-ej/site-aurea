@@ -18,13 +18,6 @@ export default function InfoCourses(props) {
 
         {
 
-            src: 'https://i.ibb.co/nbfFyXd/ana-lise-tarifa-ria1.jpg',
-            title: 'Análise tarifária',
-            txt: 'Texto qualquer bla bla bla mt loouco em'
-
-        },
-        {
-
             src: 'https://i.ibb.co/zfW8059/martelinho.jpg',
             title: 'Martelinho',
             txt: 'Texto qualquer bla bla bla mt loouco em'
@@ -145,8 +138,6 @@ export default function InfoCourses(props) {
 
                     <h2>Nossos projetos de Elétrica</h2>
 
-                    <img src={leftArrow} className='arrow-left' onClick={prevImage} />
-
                     {
                         dataSlide.map((item, index) => {
 
@@ -159,8 +150,16 @@ export default function InfoCourses(props) {
                                         <div className='projectsCoursesDiv' >
 
                                             <img src={item.src} className='imgProjects' />
+
+                                            <div className='arrows' >
+
+                                                <img src={leftArrow} className='arrow-left' onClick={prevImage} />
+
+                                                <img src={rightArrow} className='arrow-right' onClick={nextImage} />
+
+                                            </div>
                                             
-                                            <h1>{item.title}</h1>
+                                            <h3>{item.title}</h3>
                                             <p>{item.txt}</p>
                                             <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p>
                                         
@@ -175,8 +174,6 @@ export default function InfoCourses(props) {
                         })
 
                     }
-
-                    <img src={rightArrow} className='arrow-right' onClick={nextImage} />
 
                 </div>
 
