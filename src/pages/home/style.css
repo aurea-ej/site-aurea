@@ -439,6 +439,7 @@ html {
 
         height: auto;
         margin-top: 15vh;
+        margin-bottom: 0;
 
     }
 
@@ -510,6 +511,18 @@ html {
     .counter {
 
         margin: 15px 0px;
+
+    }
+
+    .aboutUs {
+
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+
+    }
+    .accountants {
+
+        margin-top: 10vh;
 
     }
 
