@@ -169,7 +169,7 @@ export default function InfoCourses(props) {
                                             
                                             <h3>{item.title}</h3>
                                             <p>{item.txt}</p>
-                                            <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p>
+                                            {/* <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p> */}
                                         
                                         </div>
 

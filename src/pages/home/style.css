@@ -46,10 +46,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-image: url("../../imgs/backComp.jpeg");
+    /* background-image: url("../../imgs/backComp.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; */
 
 }
 
