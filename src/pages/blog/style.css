@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#Blog {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100vw;
+
+}
+
+#mainBlog {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100vw;
+
+}
+
+.caminhoAviao{
+
+    border-radius: 150px;
+    width: 100%;
+    height: 90%;
+    animation: anticlockwise 8s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100vw;
+
+}
+
+.caminhoAviao img {
+
+    width: 30px;
+    position: absolute;
+    top: 0px;
+
+}
+
+.warning {
+
+    position: absolute;
+    top: 50%;
+
+}
+
+.warning p {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15pt;
+    color: #DBB826;
+
+}
+
+.testeee {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+}
+
+
+.warning p::after {
+
+    animation: testt 5s infinite;
+    content: '';
+
+}
+
+.sendToLinkedin {
+
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15vh;
+    text-align: center;
+
+}
+
+.sendToLinkedin p {
+
+    color: #DBB826;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.sendToLinkedin a {
+
+    color: #DBB826;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+@keyframes anticlockwise {
+
+    0% {
+
+        transform: rotate(-360deg);
+
+    }
+    100% {
+
+        transform: rotate(0deg);
+
+    }
+
+}
+
+@keyframes testt {
+
+    0% {
+
+        content: '.';
+
+    }
+    50% {
+
+        content: '..';
+
+    }
+    75% {
+
+        content: '...';
+
+    }
+    100% {
+
+        content: '';
+
+    }
+
+}

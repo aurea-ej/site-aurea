@@ -1,0 +1,132 @@
+.title{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.title h1 {
+
+    font-size: 22pt;
+
+}
+
+.title img {
+
+    height: 35px;
+    animation: flying 1.44s linear;
+
+}
+
+
+.Aurea {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 85px;
+
+}
+
+
+.Aurea h1 {
+
+    color: #DBB826;
+
+}
+
+
+.Aurea img {
+
+    height: 30px;
+    margin-left: 5px;
+
+}
+
+
+.Aurea img:hover {
+
+    animation: fly 1.8s linear;
+
+}
+
+@keyframes fly {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    100% {
+
+        transform: translateY(-70px);
+        opacity: 0;
+
+    }
+
+}
+
+
+
+
+@keyframes flying {
+
+    0%{
+
+        transform: 
+            translateX(0px)
+            /* translateY(0px) */
+            /* rotate(0deg); */
+
+    }
+
+    50%{
+
+        transform: 
+            translateX(40px);
+            /* translateY(-10px) */
+            /* rotate(-180deg); */
+        opacity: .3;
+
+    }
+
+    100%{
+
+        transform: 
+            translateX(0px);
+            /* translateY(0px) */
+            /* rotate(-180deg); */
+        opacity: 1;
+
+    }
+
+}
+
+.title img:hover {
+
+    animation: takeOff 2s linear;
+
+}
+
+@keyframes takeOff {
+
+    0%{
+
+        transform: 
+            translateY(0px)
+            rotate(-90deg);
+
+    }
+
+    100%{
+
+        transform: 
+            translateY(-90px)
+            rotate(-90deg);
+
+        opacity: 0;
+
+    }
+
+}
