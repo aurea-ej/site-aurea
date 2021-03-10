@@ -306,7 +306,7 @@ function Home() {
 
                 </div>
 
-                <div className='accountants' >
+                {/* <div className='accountants' >
 
                     <div className='counter'>
 
@@ -319,7 +319,7 @@ function Home() {
                     <div className='counter'>
 
                         <img src={membersIcon}/>
-                        <strong>37</strong>
+                        <strong>32</strong>
                         <p>Membros</p>
 
                     </div>
@@ -332,7 +332,7 @@ function Home() {
 
                     </div>
 
-                </div>
+                </div> */}
 
             </section>
                         

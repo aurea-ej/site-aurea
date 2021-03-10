@@ -20,17 +20,17 @@ export default function InfoCourses(props) {
 
             src: 'https://i.ibb.co/zfW8059/martelinho.jpg',
             title: 'Martelinho',
-            txt: 'Texto qualquer bla bla bla mt loouco em'
-
-        },
-        {
-
-            src: 'https://i.ibb.co/S0pnmtR/construgas.jpg',
-            title: 'Construgás',
-            txt: 'Texto qualquer bla bla bla mt loouco em'
+            txt: 'A atuação da Aurea nesta consultoria foi entender as dores da Martelinho para que fosse possível desenhar a melhor solução possível para uma cabine de pintura automotiva.    O problema geral era lidar com o overspray do ato da pintura de carros, porém para desenvolver um sistema de exaustão para retirar estas micropartículas, foi necessário a consideração de diversos fatores.    Entender os modelos de exaustor e suas IPs no mercado, estudo sobre filtros, normas regulamentadoras da área ambiental e aplicação de conceitos da física como pressão e vazão. Ao final, foi possível entregar uma solução totalmente eficaz para a situação apresentada.'
 
         }
     ]
+    const waiting = {
+
+        src: 'https://i.ibb.co/S0pnmtR/construgas.jpg',
+        title: 'Construgás',
+        txt: 'Texto qualquer bla bla bla mt loouco em'
+
+    }
     const nextImage = () => {
 
         setCurrent(current === dataSlide.length - 1 ? 0 : current + 1)
@@ -161,7 +161,7 @@ export default function InfoCourses(props) {
                                             
                                             <h3>{item.title}</h3>
                                             <p>{item.txt}</p>
-                                            <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p>
+                                            {/* <p>Este foi um serviço de: {item.serviceType} {item.duration ? `e teve duração de: ${item.duration}.` : '.' }</p> */}
                                         
                                         </div>
 
