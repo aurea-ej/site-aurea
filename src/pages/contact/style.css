@@ -210,3 +210,13 @@ fieldset #message {
         width: 88%;
     }
 }
+
+@media only screen and (max-width: 600px) {
+
+    fieldset .selects select {
+
+        width: 112%;
+
+    }
+
+}

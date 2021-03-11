@@ -426,7 +426,14 @@ html {
     .descIntro {
 
         width: 90%;
+
     }
+
+    /* .descIntro p {
+
+        font-size: 14px;
+
+    } */
 
     .rowMatrixServices {
 
@@ -481,6 +488,35 @@ html {
     .accountants {
 
         margin-top: 10vh;
+
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .descIntro {
+
+        width: 75%;
+
+    }
+
+    .descIntro p {
+
+      font-size: 10pt;
+
+    }
+
+    #services h1 {
+
+        font-size: 17pt;
+
+    }
+
+    .whyUs h3 {
+
+        font-size: 15pt;
+        text-align: center;
 
     }
 
