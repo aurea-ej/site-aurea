@@ -27,7 +27,7 @@ const WhoWeAre = () => {
 
     function getLocales() {
 
-        fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
+        fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome')
         .then( async (res)=> await res.json())
         .then((json)=> {
             
