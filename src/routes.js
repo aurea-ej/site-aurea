@@ -9,6 +9,7 @@ import Com from './pages/infoCourses/com/'
 import Aut from './pages/infoCourses/aut/'
 import Ele from './pages/infoCourses/ele/'
 import Blog from './pages/blog/'
+import BlogAdm from './pages/blog-admin/'
 
 const Routes = () => {
 
@@ -24,6 +25,7 @@ const Routes = () => {
             <Route component={Aut} path='/servicos/Automacao' />
             <Route component={Ele} path='/servicos/Eletrica' />
             <Route component={Blog} path='/Blog' />
+            <Route component={BlogAdm} path='/Blog-Aurea-Admin' />
 
         </BrowserRouter>
 

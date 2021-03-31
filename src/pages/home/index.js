@@ -5,13 +5,6 @@ import Footer from '../../components/footer/footer'
 import { Link } from "react-router-dom";
 import Lottie from 'react-lottie';
 
-import photo1 from '../../imgs/mission.jpg'
-import photo2 from '../../imgs/values.jpg'
-import photo3 from '../../imgs/eyesight.jpg'
-
-import leftArrow from '../../imgs/leftArrow.png'
-import rightArrow from '../../imgs/rightArrow.png'
-
 import whatsappIcon from '../../imgs/whatsappIcon.png'
 
 import flyingLogo from '../../imgs/flyingLogo.png'
@@ -26,37 +19,8 @@ import autoAnimation from '../../imgs/autoAnimation.json'
 
 function Home() {
 
-    const [current,setCurrent] = useState(0)
-    const dataSlide = [
-
-        {
-
-            src: photo1
-
-        },
-        {
-
-            src: photo2
-
-        },
-        {
-
-            src: photo3
-
-        }
-    ]
-    const nextImage = () => {
-
-        setCurrent( current === dataSlide.length - 1 ? 0 : current + 1 )
-        
-    }
-    const prevImage = () => {
-
-        setCurrent( current === 0 ? dataSlide.length - 1 : current - 1 )
-
-    }
-
     const wppIcon = useRef()
+
     function scrolling() {
 
         const infoServices = Array.from(document.querySelectorAll('b'))
@@ -80,7 +44,6 @@ function Home() {
                 item.style.opacity = 1
                 item.style.animation = 'teste 2s linear'
             }
-
             
         } )
         
@@ -100,10 +63,9 @@ function Home() {
 
     useEffect(() => {
 
-        window.onscroll = () => scrolling();
+        window.onscroll = () => scrolling(); 
 
     }, []);
-
 
     const defaultOptions = {
         loop: true,

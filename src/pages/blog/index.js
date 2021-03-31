@@ -1,7 +1,6 @@
 import { React, useEffect } from 'react'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
-import { Link } from "react-router-dom"
 
 import aviaoAureaVertical from '../../imgs/aviaoAurea.png'
 
@@ -11,7 +10,7 @@ export default function InfoCourses() {
 
     useEffect(() => {
 
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
 
     }, []);
 

@@ -1,0 +1,37 @@
+#BlogAdmin {
+
+    /* background-color: black; */
+
+}
+
+#mainBlogAdmin {
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.field-full {
+
+    width: 100%;
+
+}
+
+.sendButtonBlog {
+
+    padding: 15px;
+    background-color: #DBB826;
+    border-radius: 5px;
+    font-size: 11pt;
+    margin-bottom: 10vh;
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+}
