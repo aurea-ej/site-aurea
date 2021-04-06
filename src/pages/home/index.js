@@ -5,6 +5,10 @@ import Footer from '../../components/footer/footer'
 import { Link } from "react-router-dom";
 import Lottie from 'react-lottie';
 
+import firebase from 'firebase/app'
+import "firebase/analytics";
+import firebaseConfig from '../../FIREBASECONFIG.js'
+
 import whatsappIcon from '../../imgs/whatsappIcon.png'
 
 import flyingLogo from '../../imgs/flyingLogo.png'
@@ -65,6 +69,13 @@ function Home() {
 
         window.onscroll = () => scrolling(); 
 
+        console.log('sdaasa')
+
+        if(!firebase.apps.length){
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics()
+        }
+        
     }, []);
 
     const defaultOptions = {

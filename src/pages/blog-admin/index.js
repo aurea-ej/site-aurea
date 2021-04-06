@@ -6,6 +6,7 @@ import './style.css';
 import firebase from 'firebase/app'
 import "firebase/firestore";
 import "firebase/database";
+import "firebase/analytics";
 import firebaseConfig from '../../FIREBASECONFIG.js'
 
 export default function InfoCourses() {
@@ -27,7 +28,8 @@ export default function InfoCourses() {
 
     function sendPost() {
 
-        firebase.initializeApp(firebaseConfig);
+        // firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
 
         firebase.database().ref('posts/0').set({
             title: formData.title,
