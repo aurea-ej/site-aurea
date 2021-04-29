@@ -69,8 +69,6 @@ function Home() {
 
         window.onscroll = () => scrolling(); 
 
-        console.log('sdaasa')
-
         if(!firebase.apps.length){
             firebase.initializeApp(firebaseConfig);
             firebase.analytics()

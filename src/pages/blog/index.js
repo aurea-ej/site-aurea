@@ -1,6 +1,11 @@
-import { React, useEffect } from 'react'
+import { React, useEffect, useState } from 'react'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
+
+import firebase from 'firebase/app'
+import "firebase/firestore";
+import "firebase/database";
+import firebaseConfig from '../../FIREBASECONFIG.js'
 
 import aviaoAureaVertical from '../../imgs/aviaoAurea.png'
 
@@ -14,42 +19,104 @@ export default function InfoCourses() {
 
     }, []);
 
-    return (
+    const [dataBlog, setDataBlog] = useState([{}])
+    const [dataBlogExists, setDataBlogExists] = useState(false)
 
-        <div id='Blog'>
+    useEffect(() => {
 
-            <Header />
+        if(!firebase.apps.length)
+            firebase.initializeApp(firebaseConfig);
 
-            <main id='mainBlog'>
+        firebase.database().ref('posts').get('/posts')
+        .then(function(snapshot) {
 
-                <div className= 'testeee' >
+            if (snapshot.exists()){
+                setDataBlogExists(true)
+                var data = snapshot.val()
+                var temp = Object.keys(data).map((key) => data[key])
+                setDataBlog(temp)
+            }
+            else
+                setDataBlogExists(false)
+        })
 
-                    <div className='caminhoAviao' >
+    }, []);
 
-                        <img src={aviaoAureaVertical} />
+    if (dataBlogExists) {
+
+        return (
+
+            <div id='Blog' >
+
+                <Header />
+
+                <main id='mainBlog'>
+
+                    <h1>Bem vindos ao Blog Aureano 💛 </h1>
+
+                    {dataBlog.map((item)=> (
+
+                        <div className='postDiv' >
+
+                            <h3>{item.title}</h3>
+                            <h5>{item.desc}</h5>
+                            <img src={item.imageUrl} />
+                            <p>{item.content}</p>
+
+                        </div>
+
+                    ))}
+
+
+                </main>
+                
+                <Footer />
+
+            </div>
+        )
+        
+    }else{
+        
+        return (
+
+            <div id='Blog' style={{backgroundColor: "#000"}}>
+
+                <Header />
+
+                <main id='mainBlog'>
+
+                    <div className= 'testeee' >
+
+                        <div className='caminhoAviao' >
+
+                            <img src={aviaoAureaVertical} />
+
+                        </div>
+
+                        <div className='warning' >
+
+                            <p>Em construção </p>
+
+                        </div>
 
                     </div>
 
-                    <div className='warning' >
+                    <div className= 'sendToLinkedin' >
 
-                        <p>Em construção </p>
+                        <p>Enquanto isso, acesse nosso <a href = 'https://www.linkedin.com/company/aureaej/posts/?feedView=all' target='_blank' >Linkedin</a> e veja os últimos posts</p>
 
                     </div>
+                    <sectio>
 
-                </div>
+                    </sectio>
 
-                <div className= 'sendToLinkedin' >
+                </main>
+                
+                <Footer />
 
-                    <p>Enquanto isso, acesse nosso <a href = 'https://www.linkedin.com/company/aureaej/posts/?feedView=all' target='_blank' >Linkedin</a> e veja os últimos posts</p>
+            </div>
 
-                </div>
-
-            </main>
-            
-            <Footer />
-
-        </div>
-
-    )
+        )
+    }
 
 }

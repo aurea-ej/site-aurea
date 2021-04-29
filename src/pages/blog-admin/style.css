@@ -1,12 +1,6 @@
 #BlogAdmin {
 
-    /* background-color: black; */
-
-}
-
-#mainBlogAdmin {
-
-    height: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,14 +8,47 @@
 
 }
 
-.field-full {
+#mainBlogAdmin {
 
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#mainBlogAdmin fieldset {
+
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#mainBlogAdmin fieldset input{
+
+    color: #FFF;
+
+}
+
+#mainBlogAdmin fieldset textarea {
+
+    width: 103%;
+    height: 500px;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    margin-bottom: 5vh;
 
 }
 
 .sendButtonBlog {
 
+    cursor: pointer;
     padding: 15px;
     background-color: #DBB826;
     border-radius: 5px;
@@ -32,6 +59,10 @@
 
 @media screen and (max-width: 768px) {
 
+    #mainBlogAdmin {
 
+        width: 80%;
+
+    }
 
 }

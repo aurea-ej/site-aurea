@@ -28,15 +28,17 @@ export default function InfoCourses() {
 
     function sendPost() {
 
-        // firebase.initializeApp(firebaseConfig);
-        // firebase.analytics();
+        if(!firebase.apps.length)
+            firebase.initializeApp(firebaseConfig);
 
-        firebase.database().ref('posts/0').set({
+        const id = firebase.database().ref().child('posts').push().key
+
+        firebase.database().ref('posts/' + id).set({
             title: formData.title,
             desc: formData.desc,
             imageUrl: formData.imageUrl,
             content: formData.content
-        });
+        }).then(()=>alert("Post enviado com sucesso"));
         
     }
 
@@ -63,73 +65,40 @@ export default function InfoCourses() {
 
                     <fieldset>
 
-                        <div className="inputboxes">
+                        <label htmlFor='title' >Titulo</label>
+                        <input
+                            type='text'
+                            name='title'
+                            id='title'
+                            onChange={handleInputChange}
+                        />
 
-                            <div className="field-group1">
+                        <label htmlFor='desc'>Resumo</label>
+                        <input
+                            type='text'
+                            name='desc'
+                            id='desc'
+                            onChange={handleInputChange}
+                        />
 
-                                <div className="field">
+                        <label htmlFor='imageUrl'>
+                            Url da imagem</label>
+                        <input
+                            type='text'
+                            name='imageUrl'
+                            id='imageUrl'
+                            onChange={handleInputChange}
+                        />
 
-                                    <label htmlFor='name' >Titulo</label>
-                                    <input
-                                        type='text'
-                                        name='title'
-                                        id='title'
-                                        onChange={handleInputChange}
-                                    />
+                        <label htmlFor='content'>Conteúdo</label>
+                        <textarea
+                            type='text'
+                            name='content'
+                            id='content'
+                            onChange={handleInputChange}
+                        />
 
-                                </div>
-
-
-                                <div className="field">
-
-                                    <label htmlFor='phone'>Resumo</label>
-                                    <input
-                                        type='text'
-                                        name='desc'
-                                        id='desc'
-                                        onChange={handleInputChange}
-                                    />
-
-                                </div>
-
-                            </div>
-
-                            <div className="field-group1">
-
-                                <div className="field-full">
-
-                                    <label htmlFor='contact'>
-                                        Url da imagem</label>
-                                    <input
-                                        type='text'
-                                        name='imageUrl'
-                                        id='imageUrl'
-                                        onChange={handleInputChange}
-                                    />
-
-                                </div>
-
-                            </div>
-
-                            <div className="field-group1">
-
-                                <div className="field-full">
-                                    
-                                    <label htmlFor='subject'>Conteúdo</label>
-                                    <input
-                                        type='text'
-                                        name='subject'
-                                        id='subject'
-                                        onChange={handleInputChange}
-                                    />
-
-                                </div>
-
-                            </div>
-
-                            <a className='sendButtonBlog' onClick={sendPost} >Enviar</a>
-
-                        </div>
+                        <a className='sendButtonBlog' onClick={sendPost} >Enviar</a>
 
                     </fieldset>
 
