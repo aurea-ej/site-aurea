@@ -22,7 +22,8 @@ export default function InfoCourses() {
         title: '',
         desc: '',
         imageUrl: '',
-        content: ''
+        content: '',
+        author: ''
 
     })
 
@@ -37,7 +38,8 @@ export default function InfoCourses() {
             title: formData.title,
             desc: formData.desc,
             imageUrl: formData.imageUrl,
-            content: formData.content
+            content: formData.content,
+            author: formData.author
         }).then(()=>alert("Post enviado com sucesso"));
         
     }
@@ -87,6 +89,15 @@ export default function InfoCourses() {
                             type='text'
                             name='imageUrl'
                             id='imageUrl'
+                            onChange={handleInputChange}
+                        />
+
+                        <label htmlFor='imageUrl'>
+                            Nome do autor</label>
+                        <input
+                            type='text'
+                            name='author'
+                            id='author'
                             onChange={handleInputChange}
                         />
 

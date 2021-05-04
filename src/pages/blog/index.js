@@ -62,11 +62,13 @@ export default function InfoCourses() {
                             <h5>{item.desc}</h5>
                             <img src={item.imageUrl} />
                             <p>{item.content}</p>
+                            <div className='postAuthor' >
+                                <span>Escrito por: {item.author}</span>
+                            </div>
 
                         </div>
 
                     ))}
-
 
                 </main>
                 

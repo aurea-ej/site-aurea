@@ -23,6 +23,7 @@
     overflow-x: hidden;
     max-width: 100vw;
     width: 100vw;
+    margin-bottom: 10vh;
 
 }
 
@@ -33,7 +34,6 @@
     padding: 5px 10px;
     border-radius: 3px;
     text-align: center;
-    margin-bottom: 10vh;
 
 }
 
@@ -45,6 +45,7 @@
     justify-content: center;
     flex-direction: column;
     font-family: 'Montserrat', 'sans-serif';
+    margin-top: 10vh;
     /* background-color: rebeccapurple; */
 
 }
@@ -74,7 +75,23 @@
     color: black;
     text-align: justify;
     text-indent: 2em;
-    /* background-color: rebeccapurple; */
+
+}
+
+.postAuthor {
+
+    width: 80%;
+    text-align: right;
+
+}
+
+.postAuthor span{
+
+    color: white;
+    padding: 5px;
+    font-size: 10pt;
+    border-radius: 5px;
+    background-color: #DBB826;
 
 }
 
