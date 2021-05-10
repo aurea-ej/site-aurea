@@ -59,7 +59,15 @@
 
 .postDiv h3 {
 
+    padding: 15px;
+    color: white;
     font-size: 22pt;
+    position: relative;
+    background-color: #DBB826;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius:     25px;
+    border-top-right-radius:    25px;
 
 }
 
