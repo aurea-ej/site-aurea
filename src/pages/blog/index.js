@@ -35,6 +35,7 @@ export default function InfoCourses() {
                 var data = snapshot.val()
                 var temp = Object.keys(data).map((key) => data[key])
                 setDataBlog(temp)
+                console.log(temp[0])
             }
             else
                 setDataBlogExists(false)

@@ -11,12 +11,6 @@ import firebaseConfig from '../../FIREBASECONFIG.js'
 
 export default function InfoCourses() {
 
-    useEffect(() => {
-
-        window.scrollTo(0, 0);
-
-    }, []);
-
     const [formData, setFormData] = useState({
 
         title: '',
@@ -27,6 +21,54 @@ export default function InfoCourses() {
 
     })
 
+    const [dataAdm, setDataAdm] = useState([{}])
+    const [dataKeysAdm, setDataKeysAdm] = useState([])
+    const [selectItemToDelete, setSelectItemToDelete] = useState('')
+    // const [needUpdatePage, setNeedUpdatePage] = useState(false)
+
+    useEffect(() => {
+
+        window.scrollTo(0, 0);
+
+    }, []);
+
+    useEffect(() => {
+
+        if(!firebase.apps.length)
+            firebase.initializeApp(firebaseConfig);
+
+        var ref = firebase.database().ref("posts");
+
+        ref.get('/posts').then(function(snapshot) {
+
+            if (snapshot.exists()){
+                var data = snapshot.val()
+                var temp = Object.keys(data).map((key) => data[key])
+                setDataAdm(temp)
+            }
+
+        })
+
+    }, []);
+
+    useEffect(() => {
+
+        if(!firebase.apps.length)
+            firebase.initializeApp(firebaseConfig);
+
+        var ref = firebase.database().ref("posts");
+
+        var keys = []
+
+        ref.orderByKey().on("child_added", function(snapshot) {
+            keys.push(snapshot.key);
+        });
+
+        setDataKeysAdm(keys)
+
+    }, []);
+
+    
     function sendPost() {
 
         if(!firebase.apps.length)
@@ -50,6 +92,23 @@ export default function InfoCourses() {
         setFormData({
 
             ...formData, [name]: value
+
+        })
+        
+    }
+
+    function handleSelectItemToDelete(event) {
+
+        setSelectItemToDelete(event.target.value)
+        
+    }
+
+    function deletePost() {
+
+        firebase.database().ref('posts/' + dataKeysAdm[selectItemToDelete]).remove()
+        .then(function(snapshot) {
+
+            alert("Post excluido")
 
         })
         
@@ -106,6 +165,8 @@ export default function InfoCourses() {
                             type='text'
                             name='content'
                             id='content'
+                            // wrap
+                            spellCheck
                             onChange={handleInputChange}
                         />
 
@@ -114,6 +175,30 @@ export default function InfoCourses() {
                     </fieldset>
 
                 </form>
+
+                <section className="defaultSectionAdmin">
+
+                    <h2>Apagar artigo</h2>
+
+                    <select onChange={handleSelectItemToDelete} >
+
+                        <option>Selecione o item</option>
+
+                        {dataAdm.map((item,index) => {
+
+                            return (
+
+                                <option key={index} value={index} >{item.title}</option>
+
+                            )
+
+                        })}
+
+                    </select>
+
+                    <a className='sendButtonBlog' onClick={deletePost} >Apagar</a>
+
+                </section>
 
             </main>
             

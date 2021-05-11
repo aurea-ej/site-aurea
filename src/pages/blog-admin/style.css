@@ -57,6 +57,29 @@
 
 }
 
+.defaultSectionAdmin {
+
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.defaultSectionAdmin select {
+
+    width: 50%;
+    border-radius: 5px;
+    background-color: black;
+    border: none;
+    margin: 3px 0px 50px 0px;
+    padding: 16px 24px;
+    font-size: 14px;
+    color: #DBB826;
+
+}
+
 @media screen and (max-width: 768px) {
 
     #mainBlogAdmin {
