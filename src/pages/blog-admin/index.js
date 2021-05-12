@@ -24,6 +24,9 @@ export default function InfoCourses() {
     const [dataAdm, setDataAdm] = useState([{}])
     const [dataKeysAdm, setDataKeysAdm] = useState([])
     const [selectItemToDelete, setSelectItemToDelete] = useState('')
+    const [paragraph, setParagraph] = useState([])
+    const [paragraphs, setParagraphs] = useState([])
+    const [paragraphsAmount, setParagraphsAmount] = useState(0)
     // const [needUpdatePage, setNeedUpdatePage] = useState(false)
 
     useEffect(() => {
@@ -81,7 +84,8 @@ export default function InfoCourses() {
             desc: formData.desc,
             imageUrl: formData.imageUrl,
             content: formData.content,
-            author: formData.author
+            author: formData.author,
+            paragraphs: paragraphs
         }).then(()=>alert("Post enviado com sucesso"));
         
     }
@@ -102,15 +106,35 @@ export default function InfoCourses() {
         setSelectItemToDelete(event.target.value)
         
     }
-
+    
     function deletePost() {
-
+        
         firebase.database().ref('posts/' + dataKeysAdm[selectItemToDelete]).remove()
         .then(function(snapshot) {
-
+            
             alert("Post excluido")
-
+            
         })
+        
+    }
+    
+    function handleInputParagraphChange(event) {
+
+        if (event.key == 'Enter') {
+
+            setParagraph(event.target.value)
+            AddParagraph()
+            return 0;
+            
+        }
+        
+        setParagraph(event.target.value)
+        
+    }
+
+    function AddParagraph() {
+
+        paragraphs.push(paragraph)
         
     }
 
@@ -165,9 +189,17 @@ export default function InfoCourses() {
                             type='text'
                             name='content'
                             id='content'
-                            // wrap
                             spellCheck
-                            onChange={handleInputChange}
+                            onChange={(event)=>{
+                                const {name, value} = event.target
+                                setFormData({
+
+                                    ...formData, [name]: value
+
+                                })
+                            }}
+                            // onChange={handleInputChange}
+                            onKeyDown={handleInputParagraphChange}
                         />
 
                         <a className='sendButtonBlog' onClick={sendPost} >Enviar</a>

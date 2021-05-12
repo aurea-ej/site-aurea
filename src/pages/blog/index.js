@@ -35,7 +35,7 @@ export default function InfoCourses() {
                 var data = snapshot.val()
                 var temp = Object.keys(data).map((key) => data[key])
                 setDataBlog(temp)
-                console.log(temp[0])
+                // console.log(temp[0])
             }
             else
                 setDataBlogExists(false)
@@ -62,7 +62,20 @@ export default function InfoCourses() {
                             <h3>{item.title}</h3>
                             <h5>{item.desc}</h5>
                             <img src={item.imageUrl} />
-                            <p>{item.content}</p>
+
+                            <div className="paragraphPost" >
+                                {
+                                    Array(item.paragraphs).map((item)=>(
+
+                                        <div style={{width: "100%"}}>
+                                            <p>{item}</p>
+                                        </div>
+
+                                    ))
+                                }
+                            </div>
+
+                            {/* <p>{item.content}</p> */}
                             <div className='postAuthor' >
                                 <span>Escrito por: {item.author}</span>
                             </div>
