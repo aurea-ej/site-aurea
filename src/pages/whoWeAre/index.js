@@ -283,7 +283,7 @@ const WhoWeAre = () => {
                         <figure>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_meu-nome-%C3%A9-paula-jordy-e-tive-o-prazer-de-activity-6711735216467267584-aUNy' >
-                                <img src='https://i.ibb.co/MSDfRGN/Paula.png' />
+                                <img src='https://i.ibb.co/7yb0Fbc/Full-Size-Render.jpg' />
                             </a>
 
                             <figcaption className='marginLeftTextRepors' >
