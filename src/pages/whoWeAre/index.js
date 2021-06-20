@@ -221,7 +221,7 @@ const WhoWeAre = () => {
                             </figcaption>
                             
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_meu-nome-%C3%A9-b%C3%A1rbara-trabalhei-na-diretoria-activity-6706697845317148672-7kmY' >
-                                <img src='https://media-exp1.licdn.com/dms/image/C4E22AQHtWIAXbUfKog/feedshare-shrink_800/0/1599001370062?e=1617840000&v=beta&t=G82Edxf_pp-XsdlvAbwLPChlMC16B4yi_aMGYUinJy8' />
+                                <img src='https://i.ibb.co/TbNNdWZ/Barbara-2.jpg' />
                             </a>
 
                         </figure>
