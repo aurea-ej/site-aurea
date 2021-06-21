@@ -269,7 +269,7 @@ const WhoWeAre = () => {
                             </figcaption>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_depoimento-da-ana-carolina-assessora-do-activity-6704472284381425665-E5jz' >
-                                <img src='https://i.ibb.co/HgFsBpt/Carol.jpg' />
+                                <img src='https://i.ibb.co/xDkHPwK/IMG-2446.jpg' />
                             </a>
                             
                         </figure>
