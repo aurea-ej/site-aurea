@@ -176,7 +176,7 @@ const WhoWeAre = () => {
                             </figcaption>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_p%C3%B3s-j%C3%BAnior-maria-clara-moura-quando-encontrei-activity-6692115629366927360-xTl7'>
-                                <img src='https://i.ibb.co/99jghYn/Maria-Clara.jpg' />
+                                <img src='https://i.ibb.co/rsg5HvG/Captura-de-tela-2021-06-22-195444.png' />
                             </a>
 
                         </figure>
