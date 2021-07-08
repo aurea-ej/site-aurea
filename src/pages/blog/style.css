@@ -37,6 +37,16 @@
 
 }
 
+#mainBlog h3 {
+
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+
+}
+
 .postDiv {
 
     width: 100%;

@@ -138,7 +138,7 @@ const WhoWeAre = () => {
                         <figure>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_antes-e-depois-pr%C3%A9-e-p%C3%B3s-separado-por-activity-6690008491198885888-qBzV' >
-                                <img src='https://media-exp1.licdn.com/dms/image/C4E22AQF-bGYccDk5FA/feedshare-shrink_800/0/1595022317182?e=1617840000&v=beta&t=7ZoNeuWWicLsG1rptb6YiQYWjK__1Z09mcKVwmQFKPY' />
+                                <img src='https://i.ibb.co/10S1f5R/Heitor.png' />
                             </a>
 
                             <figcaption className='marginLeftTextRepors' >
@@ -176,7 +176,7 @@ const WhoWeAre = () => {
                             </figcaption>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_p%C3%B3s-j%C3%BAnior-maria-clara-moura-quando-encontrei-activity-6692115629366927360-xTl7'>
-                                <img src='https://media-exp1.licdn.com/dms/image/C4E22AQEAAzvfxq64rg/feedshare-shrink_2048_1536/0/1595524696042?e=1617840000&v=beta&t=KxC7zVF_Pcb3X3N5LJ_HM0G-QQ1kInWgEp20n9oESb4' />
+                                <img src='https://i.ibb.co/rsg5HvG/Captura-de-tela-2021-06-22-195444.png' />
                             </a>
 
                         </figure>
@@ -192,7 +192,7 @@ const WhoWeAre = () => {
                         <figure>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_%C3%A9-bem-claro-conseguir-diferenciar-o-victor-activity-6695050016597323776-GVWa' >
-                                <img src='https://media-exp1.licdn.com/dms/image/C4E22AQHMkr4BRqYkRQ/feedshare-shrink_800/0/1596224311062?e=1617840000&v=beta&t=MT15ZsQUxfJmudL1tsBZmXQtU23pJNTzPmxmIzAmn0w' />
+                                <img src='https://i.ibb.co/BgzcL7s/Victor.png' />
                             </a>
 
                             <figcaption className='marginLeftTextRepors' >
@@ -221,7 +221,7 @@ const WhoWeAre = () => {
                             </figcaption>
                             
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_meu-nome-%C3%A9-b%C3%A1rbara-trabalhei-na-diretoria-activity-6706697845317148672-7kmY' >
-                                <img src='https://media-exp1.licdn.com/dms/image/C4E22AQHtWIAXbUfKog/feedshare-shrink_800/0/1599001370062?e=1617840000&v=beta&t=G82Edxf_pp-XsdlvAbwLPChlMC16B4yi_aMGYUinJy8' />
+                                <img src='https://i.ibb.co/TbNNdWZ/Barbara-2.jpg' />
                             </a>
 
                         </figure>
@@ -235,7 +235,7 @@ const WhoWeAre = () => {
                         <figure>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_um-dia-enquanto-estava-entrando-iff-fui-activity-6697625751094743040-ynzY' >
-                                <img src='https://media-exp1.licdn.com/dms/image/C5622AQHT7xzO0N0EgA/feedshare-shrink_2048_1536/0/1596838413330?e=1617840000&v=beta&t=HAzX_C_AHY1GnpLpb9bwVhwv18gCBalJ7QvVyor51Zs' />
+                                <img src='https://i.ibb.co/FgghMkt/Jo-o-Victor.png' />
                             </a>
 
 
@@ -269,7 +269,7 @@ const WhoWeAre = () => {
                             </figcaption>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_depoimento-da-ana-carolina-assessora-do-activity-6704472284381425665-E5jz' >
-                                <img src='https://media-exp1.licdn.com/dms/image/C4E22AQH2NUUgWJyUHQ/feedshare-shrink_2048_1536/0/1598470753461?e=1617840000&v=beta&t=MsZmox2Jz2NvKASYdzx7DQ4G1f1-2MnCPcHQGIeCVAU' />
+                                <img src='https://i.ibb.co/xDkHPwK/IMG-2446.jpg' />
                             </a>
                             
                         </figure>
@@ -283,7 +283,7 @@ const WhoWeAre = () => {
                         <figure>
 
                             <a target='_blank' href='https://www.linkedin.com/posts/aureaej_meu-nome-%C3%A9-paula-jordy-e-tive-o-prazer-de-activity-6711735216467267584-aUNy' >
-                                <img src='https://media-exp1.licdn.com/dms/image/C5622AQFWOAnf8Sn3MA/feedshare-shrink_800/0/1600202372910?e=1617840000&v=beta&t=5U9WRJ2acz3uQ6qhyh-SE7lLoQgrk18C57ns9oknORg' />
+                                <img src='https://i.ibb.co/nLzW1VY/Full-Size-Render-2.jpg' />
                             </a>
 
                             <figcaption className='marginLeftTextRepors' >
