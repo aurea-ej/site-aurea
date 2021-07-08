@@ -62,7 +62,7 @@
 
 .postDiv img{
 
-    max-width: 50%;
+    max-width: 40%;
     border-radius: 10px;
 
 }
@@ -281,5 +281,11 @@
         text-align: justify;
 
     }
+    
+    .postDiv img{
+
+    max-width: 80%;
+
+}
     
 }
