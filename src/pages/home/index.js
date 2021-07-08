@@ -12,6 +12,7 @@ import firebaseConfig from '../../FIREBASECONFIG.js'
 import whatsappIcon from '../../imgs/whatsappIcon.png'
 
 import flyingLogo from '../../imgs/flyingLogo.png'
+import mascoteAurea from '../../imgs/mascoteAurea3.png'
 import membersIcon from '../../imgs/membersIcon.png'
 import awardIcon from '../../imgs/awardIcon.png'
 import projectsIcon from '../../imgs/projectsIcon.png'

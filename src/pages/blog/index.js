@@ -34,7 +34,7 @@ export default function InfoCourses() {
                 setDataBlogExists(true)
                 var data = snapshot.val()
                 var temp = Object.keys(data).map((key) => data[key])
-                setDataBlog(temp)
+                setDataBlog(temp.reverse())
                 // console.log(temp[0])
             }
             else
@@ -63,7 +63,7 @@ export default function InfoCourses() {
                             <h5>{item.desc}</h5>
                             <img src={item.imageUrl} />
 
-                            <div className="paragraphPost" >
+                            <div className="paragraphPost">
                                 {
                                     Array(item.paragraphs).map((item)=>(
 
