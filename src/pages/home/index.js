@@ -277,6 +277,21 @@ function Home() {
 
                 </div>
 
+                <div className='parceiros'>
+                    <h3> Nossos Parceiros </h3>
+                    <div className='parceirosLogos'>
+                        <a target='_blank' href='https://brasiljunior.org.br/'>
+                            <img src='https://i.ibb.co/LPqT47F/Logo-RJ.png'/>
+                        </a>
+                        <a target='_blank' href='http://www.riojunior.com.br/'>
+                            <img src='https://i.ibb.co/CP8HxWT/Logo-rio-junior.png'/>
+                        </a>
+                        <a target='_blank' href='https://portal1.iff.edu.br/'>
+                            <img src='https://i.ibb.co/WfsjRF3/Logo-iff.png'/>
+                        </a>
+                    </div>
+                </div>
+
                 {/* <div className='accountants' >
 
                     <div className='counter'>
