@@ -280,15 +280,26 @@ function Home() {
                 <div className='parceiros'>
                     <h3> Nossos Parceiros </h3>
                     <div className='parceirosLogos'>
-                        <a target='_blank' href='https://brasiljunior.org.br/'>
-                            <img src='https://i.ibb.co/LPqT47F/Logo-RJ.png'/>
-                        </a>
-                        <a target='_blank' href='http://www.riojunior.com.br/'>
-                            <img src='https://i.ibb.co/CP8HxWT/Logo-rio-junior.png'/>
-                        </a>
-                        <a target='_blank' href='https://portal1.iff.edu.br/'>
-                            <img src='https://i.ibb.co/WfsjRF3/Logo-iff.png'/>
-                        </a>
+                        <div>
+                            <a target='_blank' href='https://brasiljunior.org.br/'>
+                                <img src='https://i.ibb.co/30tg4SD/logo-brasil-junior.png'/>
+                            </a>
+                        </div>
+                        <div>
+                            <a target='_blank' href='http://www.riojunior.com.br/'>
+                                <img src='https://i.ibb.co/QCnDvbX/rio-junior-2.png'/>
+                            </a>
+                        </div>
+                        <div>
+                            <a target='_blank' href='https://portal1.iff.edu.br/'>
+                                <img src='https://i.ibb.co/Jcwy78D/logo-camposcentro-vertical2.png'/>
+                            </a>
+                        </div>
+                        <div>
+                         <a target='_blank' href='https://embrapii.org.br/en/'>
+                                <img src='https://i.ibb.co/7v2ZLdq/Logo-embrapi-1.png'/>
+                            </a>       
+                        </div>
                     </div>
                 </div>
 
