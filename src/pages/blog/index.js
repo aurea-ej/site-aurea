@@ -43,8 +43,6 @@ export default function InfoCourses() {
 
     }, []);
 
-    if (dataBlogExists) {
-
         return (
 
             <div id='Blog' >
@@ -91,48 +89,5 @@ export default function InfoCourses() {
             </div>
         )
         
-    }else{
-        
-        return (
-
-            <div id='Blog' style={{backgroundColor: "#000"}}>
-
-                <Header />
-
-                <main id='mainBlog'>
-
-                    <div className= 'testeee' >
-
-                        <div className='caminhoAviao' >
-
-                            <img src={aviaoAureaVertical} />
-
-                        </div>
-
-                        <div className='warning' >
-
-                            <p>Em construção </p>
-
-                        </div>
-
-                    </div>
-
-                    <div className= 'sendToLinkedin' >
-
-                        <p>Enquanto isso, acesse nosso <a href = 'https://www.linkedin.com/company/aureaej/posts/?feedView=all' target='_blank' >Linkedin</a> e veja os últimos posts</p>
-
-                    </div>
-                    <sectio>
-
-                    </sectio>
-
-                </main>
-                
-                <Footer />
-
-            </div>
-
-        )
+    
     }
-
-}
