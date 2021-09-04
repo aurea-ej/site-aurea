@@ -10,6 +10,8 @@ import "firebase/analytics";
 import "firebase/auth";
 import firebaseConfig from '../../FIREBASECONFIG.js'
 
+import logoAurea from '../../imgs/logoAurea2.png'
+
 export default function InfoCourses() {
 
     const [formData, setFormData] = useState({
@@ -41,14 +43,14 @@ export default function InfoCourses() {
 
     useEffect(() => {
 
-        if(!firebase.apps.length)
+        if (!firebase.apps.length)
             firebase.initializeApp(firebaseConfig);
 
         var ref = firebase.database().ref("posts");
 
-        ref.get('/posts').then(function(snapshot) {
+        ref.get('/posts').then(function (snapshot) {
 
-            if (snapshot.exists()){
+            if (snapshot.exists()) {
                 var data = snapshot.val()
                 var temp = Object.keys(data).map((key) => data[key])
                 setDataAdm(temp)
@@ -60,14 +62,14 @@ export default function InfoCourses() {
 
     useEffect(() => {
 
-        if(!firebase.apps.length)
+        if (!firebase.apps.length)
             firebase.initializeApp(firebaseConfig);
 
         var ref = firebase.database().ref("posts");
 
         var keys = []
 
-        ref.orderByKey().on("child_added", function(snapshot) {
+        ref.orderByKey().on("child_added", function (snapshot) {
             keys.push(snapshot.key);
         });
 
@@ -75,10 +77,10 @@ export default function InfoCourses() {
 
     }, []);
 
-    
+
     function sendPost() {
 
-        if(!firebase.apps.length)
+        if (!firebase.apps.length)
             firebase.initializeApp(firebaseConfig);
 
         const id = firebase.database().ref().child('posts').push().key
@@ -90,50 +92,50 @@ export default function InfoCourses() {
             content: formData.content,
             author: formData.author,
             paragraphs: paragraphs
-        }).then(()=>alert("Post enviado com sucesso"));
-        
+        }).then(() => alert("Post enviado com sucesso"));
+
     }
 
     function handleInputChange(event) {
 
-        const {name, value} = event.target
+        const { name, value } = event.target
         setFormData({
 
             ...formData, [name]: value
 
         })
-        
+
     }
 
     function handleSelectItemToDelete(event) {
 
         setSelectItemToDelete(event.target.value)
-        
+
     }
-    
+
     function deletePost() {
-        
+
         firebase.database().ref('posts/' + dataKeysAdm[selectItemToDelete]).remove()
-        .then(function(snapshot) {
-            
-            alert("Post excluido")
-            
-        })
-        
+            .then(function (snapshot) {
+
+                alert("Post excluido")
+
+            })
+
     }
 
-    function SignIn () {
+    function SignIn() {
         firebase.auth()
-        .signInWithEmailAndPassword(email, password)
-        .then((user) => {
-            setHaveLogIn(true)
-        })
-        .catch((error) => {
-            console.log(error.message)
-        });
+            .signInWithEmailAndPassword(email, password)
+            .then((user) => {
+                setHaveLogIn(true)
+            })
+            .catch((error) => {
+                console.log(error.message)
+            });
     }
 
-    if(haveLogIn) {
+    if (haveLogIn) {
         return (
             <div id='BlogAdmin'>
 
@@ -185,7 +187,7 @@ export default function InfoCourses() {
                                 name='content'
                                 id='content'
                                 spellCheck
-                                onChange={(event)=>{setParagraphs(event.target.value)}}
+                                onChange={(event) => { setParagraphs(event.target.value) }}
                             />
 
                             <a className='sendButtonBlog' onClick={sendPost} >Enviar</a>
@@ -202,7 +204,7 @@ export default function InfoCourses() {
 
                             <option>Selecione o item</option>
 
-                            {dataAdm.map((item,index) => {
+                            {dataAdm.map((item, index) => {
 
                                 return (
 
@@ -219,7 +221,7 @@ export default function InfoCourses() {
                     </section>
 
                 </main>
-                
+
                 <Footer />
 
             </div>
@@ -227,14 +229,21 @@ export default function InfoCourses() {
         )
     }
     else {
-        
+
         return (
-            <div>
 
-                <input placeholder='email' onChange={(txt)=>setEmail(txt.target.value)} />
-                <input placeholder='password' onChange={(txt)=>setPassword(txt.target.value)} />
+            <div id="BlogLogin">
 
-                <a onClick={SignIn} >Entrar</a>
+                <div className="loginForms">
+
+                    <img src={logoAurea} alt="" />
+
+                    <input placeholder='E-mail' onChange={(txt) => setEmail(txt.target.value)} />
+                    <input placeholder='Senha' onChange={(txt) => setPassword(txt.target.value)} />
+
+                    <a onClick={SignIn} >Entrar</a>
+
+                </div>
 
             </div>
         )
