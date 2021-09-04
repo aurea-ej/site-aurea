@@ -7,6 +7,7 @@ import firebase from 'firebase/app'
 import "firebase/firestore";
 import "firebase/database";
 import "firebase/analytics";
+import "firebase/auth";
 import firebaseConfig from '../../FIREBASECONFIG.js'
 
 export default function InfoCourses() {
@@ -27,11 +28,14 @@ export default function InfoCourses() {
     const [paragraph, setParagraph] = useState([])
     const [paragraphs, setParagraphs] = useState([])
     const [paragraphsAmount, setParagraphsAmount] = useState(0)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [haveLogIn, setHaveLogIn] = useState(false)
     // const [needUpdatePage, setNeedUpdatePage] = useState(false)
 
     useEffect(() => {
 
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
 
     }, []);
 
@@ -117,127 +121,123 @@ export default function InfoCourses() {
         })
         
     }
-    
-    function handleInputParagraphChange(event) {
 
-        if (event.key == 'Enter') {
-
-            setParagraph(event.target.value)
-            AddParagraph()
-            return 0;
-            
-        }
-        
-        setParagraph(event.target.value)
-        
+    function SignIn () {
+        firebase.auth()
+        .signInWithEmailAndPassword(email, password)
+        .then((user) => {
+            setHaveLogIn(true)
+        })
+        .catch((error) => {
+            console.log(error.message)
+        });
     }
 
-    function AddParagraph() {
+    if(haveLogIn) {
+        return (
+            <div id='BlogAdmin'>
 
-        paragraphs.push(paragraph)
-        
+                <Header />
+
+                <main id='mainBlogAdmin'>
+
+                    <form>
+
+                        <fieldset>
+
+                            <label htmlFor='title' >Titulo</label>
+                            <input
+                                type='text'
+                                name='title'
+                                id='title'
+                                onChange={handleInputChange}
+                            />
+
+                            <label htmlFor='desc'>Resumo</label>
+                            <input
+                                type='text'
+                                name='desc'
+                                id='desc'
+                                onChange={handleInputChange}
+                            />
+
+                            <label htmlFor='imageUrl'>
+                                Url da imagem</label>
+                            <input
+                                type='text'
+                                name='imageUrl'
+                                id='imageUrl'
+                                onChange={handleInputChange}
+                            />
+
+                            <label htmlFor='imageUrl'>
+                                Nome do autor</label>
+                            <input
+                                type='text'
+                                name='author'
+                                id='author'
+                                onChange={handleInputChange}
+                            />
+
+                            <label htmlFor='content'>Conteúdo</label>
+                            <textarea
+                                type='text'
+                                name='content'
+                                id='content'
+                                spellCheck
+                                onChange={(event)=>{setParagraphs(event.target.value)}}
+                            />
+
+                            <a className='sendButtonBlog' onClick={sendPost} >Enviar</a>
+
+                        </fieldset>
+
+                    </form>
+
+                    <section className="defaultSectionAdmin">
+
+                        <h2>Apagar artigo</h2>
+
+                        <select onChange={handleSelectItemToDelete} >
+
+                            <option>Selecione o item</option>
+
+                            {dataAdm.map((item,index) => {
+
+                                return (
+
+                                    <option key={index} value={index} >{item.title}</option>
+
+                                )
+
+                            })}
+
+                        </select>
+
+                        <a className='sendButtonBlog' onClick={deletePost} >Apagar</a>
+
+                    </section>
+
+                </main>
+                
+                <Footer />
+
+            </div>
+
+        )
     }
+    else {
+        
+        return (
+            <div>
 
-    return (
+                <input placeholder='email' onChange={(txt)=>setEmail(txt.target.value)} />
+                <input placeholder='password' onChange={(txt)=>setPassword(txt.target.value)} />
 
-        <div id='BlogAdmin'>
+                <a onClick={SignIn} >Entrar</a>
 
-            <Header />
-
-            <main id='mainBlogAdmin'>
-
-                <form>
-
-                    <fieldset>
-
-                        <label htmlFor='title' >Titulo</label>
-                        <input
-                            type='text'
-                            name='title'
-                            id='title'
-                            onChange={handleInputChange}
-                        />
-
-                        <label htmlFor='desc'>Resumo</label>
-                        <input
-                            type='text'
-                            name='desc'
-                            id='desc'
-                            onChange={handleInputChange}
-                        />
-
-                        <label htmlFor='imageUrl'>
-                            Url da imagem</label>
-                        <input
-                            type='text'
-                            name='imageUrl'
-                            id='imageUrl'
-                            onChange={handleInputChange}
-                        />
-
-                        <label htmlFor='imageUrl'>
-                            Nome do autor</label>
-                        <input
-                            type='text'
-                            name='author'
-                            id='author'
-                            onChange={handleInputChange}
-                        />
-
-                        <label htmlFor='content'>Conteúdo</label>
-                        <textarea
-                            type='text'
-                            name='content'
-                            id='content'
-                            spellCheck
-                            onChange={(event)=>{
-                                const {name, value} = event.target
-                                setFormData({
-
-                                    ...formData, [name]: value
-
-                                })
-                            }}
-                            // onChange={handleInputChange}
-                            onKeyDown={handleInputParagraphChange}
-                        />
-
-                        <a className='sendButtonBlog' onClick={sendPost} >Enviar</a>
-
-                    </fieldset>
-
-                </form>
-
-                <section className="defaultSectionAdmin">
-
-                    <h2>Apagar artigo</h2>
-
-                    <select onChange={handleSelectItemToDelete} >
-
-                        <option>Selecione o item</option>
-
-                        {dataAdm.map((item,index) => {
-
-                            return (
-
-                                <option key={index} value={index} >{item.title}</option>
-
-                            )
-
-                        })}
-
-                    </select>
-
-                    <a className='sendButtonBlog' onClick={deletePost} >Apagar</a>
-
-                </section>
-
-            </main>
-            
-            <Footer />
-
-        </div>
-
-    )
+            </div>
+        )
+    }
 
 }

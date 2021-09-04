@@ -25,7 +25,7 @@ const Routes = () => {
             <Route component={Aut} path='/servicos/Automacao' />
             <Route component={Ele} path='/servicos/Eletrica' />
             <Route component={Blog} path='/Blog' />
-            <Route component={BlogAdm} path='/F8FcjeZIij1CEcTFj6WdSuB7' />
+            <Route component={BlogAdm} path='/Blog-Aurea-admin' />
 
         </BrowserRouter>
 
